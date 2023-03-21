@@ -1,3 +1,5 @@
+import os
+import sys
 import tkinter as tk
 import re
 import traceback
@@ -35,12 +37,18 @@ def patched_throttling_plan(js: str):
     return transform_steps
 
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
+
+
 # create the window
 window = tk.Tk()
 window.title("SilvaGunner Downloader")
 window.resizable(False, False)
 window.geometry("450x200")
-window.iconbitmap("icon.ico")
+window.iconbitmap(resource_path("icon.ico"))
 
 # make window appear in the center of the screen
 window.update_idletasks()
