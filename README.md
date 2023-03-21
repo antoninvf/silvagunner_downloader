@@ -29,6 +29,7 @@ Keep in mind the program will stop you from entering videos that are not from th
 Also videos that are not formatted in the ``{Track} - {Game}`` format, will probably not get formatted correctly or possibly throw an error. So stuff like "Credits - The SiIvaGunner All-Star Nuclear Winter Festival" or "My Last Message" will not work right now. However I'm planning to add a checkbox for the auto-formatting.
 
 # Planned
+- Auto-generated Cover/Album covers (Probably from Thumbnail)
 - Better looking GUI
 - Checkbox to toggle the auto-formatting
 - Maybe an override checkbox to enter the metadata yourself for specific videos
